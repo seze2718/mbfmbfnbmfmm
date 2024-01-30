@@ -1,5 +1,6 @@
-alphabet = ("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z") 
+import string
 
+alphabet = tuple(string.ascii_lowercase) 
 def checkPos(pos, jump, index, maxBarrier):
     for jumpNode in range(jump):
         if index == 0: pos = True
@@ -29,7 +30,7 @@ def insertNum(target: str, index: int, sign: bool) -> str:
         count, pos = checkPos(pos, rfafrm5, count, len(tailoredStr))
     return "".join(tailoredStr)
 
-idiot = shuffleStr(input("string1: "),input("string2: "))
-print(insertNum(idiot[0], idiot[1], idiot[2]))
+shuffled = shuffleStr(input("string1: "),input("string2: "))
+print(insertNum(shuffled[0], shuffled[1], shuffled[2]))
 
 #print(shuffleStr(input(), input())[0])
